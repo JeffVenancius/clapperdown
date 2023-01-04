@@ -1,7 +1,3 @@
-// TODO - scroll should follow caret
-// TODO - title page should have a multiplication or something
-// TODO - type should render the pages differently
-
 const rules = [
   [/#{6}\s+([^\n]+)/g, "<h6>$1</h6>"],
   [/#{5}\s+([^\n]+)/g, "<h5>$1</h5>"],
@@ -17,27 +13,54 @@ const rules = [
   [/_([^_`]+)_/g, "<i>$1</i>"],
   [/([^\n]+\n?)/g, "<p>$1</p>"] ,
 
-  [/&br\s+([^\n]+)/g, "<h4 class='bottomright'>$1</h4>"],
-  [/&a\s+([^\n]+)/g, "<h2 class='author'>$1</h2>"],
-  [/&c\s+([^\n]+)/g, "<h4 class='contact'>$1</h4>"],
-  [/&t\s+([^\n]+)/g, "<h1 class='title'>$1</h1>"],
-  [/&type\s+([^\n]+)/g, "$1"],
+  [/&br\s+([^\n]+)/gi, "<h4 class='bottomright'>$1</h4>"],
+  [/&a\s+([^\n]+)/gi, "<h2 class='author'>$1</h2>"],
+  [/&c\s+([^\n]+)/gi, "<h4 class='contact'>$1</h4>"],
+  [/&t\s+([^\n]+)/gi, "<h1 class='title'>$1</h1>"],
+  [/&type\s+([^\n]+)/gi, "$1"],
   [/%%.*/g, ""],
 ];
 
-let screenplay = document.querySelector('#screenplay');
+const autocompletionrules = [
+    [/#{3}e\s([^\n]+)/gi, "### EXT. $1"],
+    [/#{3}i\s([^\n]+)/gi, "### INT. $1"],
+    [/#{1}\s(\d+)/g, "$1"],
+];
+
+let screenplay;
+let actors = [];
 
 function render() {
+    screenplay = document.querySelector('#screenplay');
     let textarea = document.querySelector('textarea').value;
     let linetext = textarea.split('\n');
     let type;
     let titlepage = [];
+
+    linetext = linetext.map(line => {
+        let replace;
+        for (let i = 0; i < autocompletionrules.length; i++){
+            replace = line.replace(autocompletionrules[i][0], autocompletionrules[i][1]);
+            if (i === 2 && replace !== line) {
+                if (Number(replace) <= actors.length) {
+                    replace = actors[replace - 1];
+                }
+                // else {replace = '# ' + replace;}
+            }};
+            return replace;
+        });
+
+    actors = [];
+
     linetext = linetext.map(line => {
         for (let i = 0; i < rules.length; i++){
             let replaced = line.replace(rules[i][0], rules[i][1]);
             if (line.match(/^<h/)){replaced = line;} // So it doesn't create unecessary paragraphs.
             if ( replaced !== line){
                 switch (i) {
+                case 5:
+                    if (!actors.includes(line)) {actors.push(line);};
+                    break;
                 case 12:
                 case 13:
                 case 14:
@@ -83,6 +106,7 @@ function render() {
 
 let scrollcounter = 0;
 function get_key() {
+    screenplay = document.querySelector('#screenplay');
     switch (event.key) {
     case "ArrowUp":
         scrollcounter -= 1;
