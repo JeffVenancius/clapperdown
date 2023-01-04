@@ -38,17 +38,18 @@ function render() {
     let titlepage = [];
 
     linetext = linetext.map(line => {
-        let replace;
         for (let i = 0; i < autocompletionrules.length; i++){
-            replace = line.replace(autocompletionrules[i][0], autocompletionrules[i][1]);
-            if (i === 2 && replace !== line) {
-                if (Number(replace) <= actors.length) {
-                    replace = actors[replace - 1];
-                }
-                // else {replace = '# ' + replace;}
-            }};
-            return replace;
-        });
+            let replace = line.replace(autocompletionrules[i][0], autocompletionrules[i][1]);
+            if (replace !== line && i === 2) {
+                    if (Number(replace) <= actors.length) {
+                        replace = actors[replace - 1];
+                    }
+            }
+            line = replace;
+        };
+        return line;
+    }
+    );
 
     actors = [];
 
