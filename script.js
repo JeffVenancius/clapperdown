@@ -23,8 +23,11 @@ const rules = [
 
 const autocompletionrules = [
     [/#{3}e\s([^\n]+)/gi, "### EXT. $1"],
+    [/#{1}e\s([^\n]+)/gi, "### EXT. $1"],
+    [/#{1}i\s([^\n]+)/gi, "### INT. $1"],
     [/#{3}i\s([^\n]+)/gi, "### INT. $1"],
     [/#{1}\s(\d+)/g, "$1"],
+    [/#0\d\s[^\n]+/g,""],
 ];
 
 let screenplay;
@@ -40,16 +43,29 @@ function render() {
     linetext = linetext.map(line => {
         for (let i = 0; i < autocompletionrules.length; i++){
             let replace = line.replace(autocompletionrules[i][0], autocompletionrules[i][1]);
-            if (replace !== line && i === 2) {
+            if (replace !== line)
+                switch (i) {
+                case 2:
                     if (Number(replace) <= actors.length) {
                         replace = actors[replace - 1];
                     }
-            }
+                    break;
+                case 5:
+                    let multiplier = Number(line.charAt(2));
+                    let hashtag = '';
+                    for (let i = 1; i < multiplier; i++) {
+                        hashtag += "#";
+                    };
+                    line = line.replace(line.substr(0,3),hashtag);
+                    console.log(line)
+                    replace = line;
+                    break;
+                };
             line = replace;
         };
         return line;
     });
-
+    
     actors = [];
 
     linetext = linetext.map(line => {
