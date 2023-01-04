@@ -11,7 +11,7 @@ Write your plays anywhere, on any text editor, then bring it here.
 
 &a author
 
-&c contact@contact.com
+&c contact information
 
 \&br bottomright info
 
