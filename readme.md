@@ -2,6 +2,12 @@
 A project based on markdown where you can write screenplays and such on this language to be rendered later.
 Write your plays anywhere, on any text editor, then bring it here.
 
+
+
+https://user-images.githubusercontent.com/43701418/210643429-3786d25a-29d4-42f4-b893-c83dac50b3b1.mp4
+
+
+
 ## Documentation
 
 ### Titlepage
