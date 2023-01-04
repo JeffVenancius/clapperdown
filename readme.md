@@ -2,10 +2,6 @@
 A project based on markdown where you can write screenplays and such on this language to be rendered later.
 Write your plays anywhere, on any text editor, then bring it here.
 
-
-
-
-
 ## Documentation
 
 ### Titlepage
