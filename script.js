@@ -48,8 +48,7 @@ function render() {
             line = replace;
         };
         return line;
-    }
-    );
+    });
 
     actors = [];
 
@@ -107,15 +106,15 @@ function render() {
 
 let scrollcounter = 0;
 function get_key() {
-    screenplay = document.querySelector('#screenplay');
-    switch (event.key) {
-    case "ArrowUp":
-        scrollcounter -= 1;
-        break;
-    case "ArrowDown":
-    case "Enter":
-        scrollcounter +=1;
-    }
-    scrollcounter = Math.min(Math.max(scrollcounter, 0), document.querySelector('#screenplay').scrollHeight);
-    screenplay.scroll(0,scrollcounter * 10);
+    // screenplay = document.querySelector('#screenplay');
+    // switch (event.key) {
+    // case "ArrowUp":
+    //     scrollcounter -= 1;
+    //     break;
+    // case "ArrowDown":
+    // case "Enter":
+    //     scrollcounter +=1;
+    // }
+    // scrollcounter = Math.min(Math.max(scrollcounter, 0), document.querySelector('#screenplay').scrollHeight);
+    // screenplay.scroll(0,scrollcounter * 10);
 }
