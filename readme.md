@@ -41,7 +41,18 @@ TODO - count pages (it should be more or less 55 lines per page on a screenplay)
 
 TODO - CONTINUE mark when it needs to (again, for that I'll need to count the pages, also I'll need to see if the renderer is wrapping or not, maybe?)
 
----
+##### TODO - autocompletion, here's what I've thought:
 
-Pretty simple, basically.
+\###ed a place = EXT - A PLACE - DAY
 
+\###in a place = INT - A PLACE - NIGHT
+
+\#1 = Actor by appearence, example:
+
+\# Joe
+
+\# Maria
+
+\#1 = Joe
+
+\#2 = Maria
