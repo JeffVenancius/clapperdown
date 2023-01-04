@@ -45,16 +45,22 @@ TODO - parenthesis should be centered.
 
 ##### TODO - autocompletion, here's what I've thought:
 
-\###ed a place = EXT - A PLACE - DAY
+<s>\###ed a place = EXT - A PLACE - DAY</s>
 
-\###in a place = INT - A PLACE - NIGHT
+<s>\###in a place = INT - A PLACE - NIGHT</s>
 
-\#1 = Actor by appearence, example:
+<s>\#1 = Actor by appearence, example:</s>
 
-\# Joe
+<s>\# Joe</s>
 
-\# Maria
+<s>\# Maria</s>
 
-\#1 = Joe
+<s>\#1 = Joe</s>
 
-\#2 = Maria
+<s>\#2 = Maria</s>
+
+#### DONES
+
+DONE - Autocompletion for places (couldn't set time of day yet, though)
+
+DONE - Autocompletion for actors by numbering their appearence.
