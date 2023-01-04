@@ -1,0 +1,116 @@
+#screenplay {
+    padding-top: 1in;
+    padding-bottom: 1in;
+    padding-left: 1.5in;
+    padding-right: 1.25in;
+    margin: 0;
+    width: 11in;
+    height: 8.5in;
+    font-family: Courier;
+    word-wrap: break-word;
+    border-left: solid;
+    border-right: solid;
+    border-top: solid;
+    counter-reset: places;
+    overflow-y: auto;
+}
+p {
+    margin-left: 2.5in;
+}
+h1 {
+    margin-left: 3.7in;
+    margin-top: .1in;
+}
+
+
+p,h1 {
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0.01in;
+    padding-right: 2in;
+}
+
+span {
+    margin-right: 1%;
+}
+
+h4 {
+    text-align: right;
+}
+
+p, h1, h2, h3, h4, h5, span {
+    font-size: 12pt;
+    font-weight: 500;
+}
+
+h1,h2,h3,h4,h5,span,b {
+    font-weight: 600;
+}
+
+h1,h2,h3,h5 {
+    padding-right: 1in;
+}
+
+.title, h1, h3, h4 {
+    text-transform: uppercase;
+}
+
+.title, .author {
+    text-align: center;
+    margin: 0;
+}
+
+#containertitle {
+    margin-top: 25%;
+}
+
+#containercontact {
+    margin-right: auto;
+}
+
+.contact {
+    text-transform: none;
+}
+
+#containerauthor {
+    margin-top: 1em;
+}
+
+.author {
+    margin-bottom: .25em;
+    margin-top: .25em;
+}
+
+#bottomtitle {
+    margin-top: 30%;
+    display: flex;
+    align-content: space-between;
+}
+
+
+#titlepage {
+    width: 100%;
+    height: 75%;
+    margin: 0;
+    padding: 0;
+}
+
+#editmd {
+    display: flex;
+    flex-direction: row;
+    align-content: space-evenly;
+}
+
+textarea {
+    resize: none;
+    width: 50%;
+}
+
+
+.place::before {
+    counter-increment: places;
+    content: counter(places) " - ";
+}
