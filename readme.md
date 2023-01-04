@@ -33,6 +33,20 @@ https://user-images.githubusercontent.com/43701418/210643429-3786d25a-29d4-42f4-
 
 This is a character speaking.
 
+### Autocompletions
+
+\#e = same as ### EXT.
+
+\#i = same as ### INT.
+
+\###e = same as ### EXT.
+
+\###i = same as ### INT.
+
+\#1 = same as # Actor name in order of appearence
+
+\#02 = # this many times (zero is important!)
+
 ---
 
 #### TODOS - A lot.
@@ -70,3 +84,7 @@ TODO - parenthesis should be centered.
 DONE - Autocompletion for places (couldn't set time of day yet, though)
 
 DONE - Autocompletion for actors by numbering their appearence.
+
+DONE - hashtag multiplier.
+
+DONE - Autocompletion for places simplified.
