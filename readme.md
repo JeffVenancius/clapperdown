@@ -41,6 +41,8 @@ TODO - count pages (it should be more or less 55 lines per page on a screenplay)
 
 TODO - CONTINUE mark when it needs to (again, for that I'll need to count the pages, also I'll need to see if the renderer is wrapping or not, maybe?)
 
+TODO - parenthesis should be centered.
+
 ##### TODO - autocompletion, here's what I've thought:
 
 \###ed a place = EXT - A PLACE - DAY
