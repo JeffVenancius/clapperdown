@@ -23,6 +23,8 @@ https://user-images.githubusercontent.com/43701418/210643429-3786d25a-29d4-42f4-
 
 ### Actual writing
 
+P.S: number of # are based on how much it's used, usually.
+
 \#### transition
 
 \### EXT. PLACE - DAY
@@ -46,6 +48,18 @@ This is a character speaking.
 \#1 = same as # Actor name in order of appearence
 
 \#02 = # this many times (zero is important!)
+
+### Effects
+
+\~underlined text~
+
+\*\*bold text**
+
+\_\_bold text__
+
+\*italic text*
+
+\_italic text_
 
 ---
 
