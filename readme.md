@@ -5,8 +5,6 @@ Write your plays anywhere, on any text editor, then bring it here.
 
 
 
-https://user-images.githubusercontent.com/43701418/210641408-131a9110-d5b7-4192-951f-58d28627f042.mp4
-
 
 ## Documentation
 
