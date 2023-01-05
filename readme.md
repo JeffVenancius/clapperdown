@@ -2,11 +2,16 @@
 A project based on markdown where you can write screenplays and such on this language to be rendered later.
 Write your plays anywhere, on any text editor, then bring it here.
 
+Disclaimer - I've discovered you can already do this kind of thing with LaTeX, take a look:
 
+https://www.youtube.com/watch?v=oXXfqKV4yhU
+
+Thing is, LaTeX is a VERY powerfull tool, and as someone once said, "with great power comes great responsibilities"
+
+
+The idea now is that with less power com lesses responsabilities. Average people should just write without worrying so much and without the software getting in the way, that's what I think.
 
 https://user-images.githubusercontent.com/43701418/210643429-3786d25a-29d4-42f4-b893-c83dac50b3b1.mp4
-
-
 
 ## Documentation
 
